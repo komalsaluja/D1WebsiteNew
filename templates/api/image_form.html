@@ -1,5 +1,4 @@
 {% extends './adminPage.html' %}
-{% load hosts %}
 {% block content %}
 <div class="row">
     <div class="col-sm-8 offset-2">
@@ -8,7 +7,7 @@
             {% csrf_token %}
             {{form.as_p}}
             <input type="submit" value="Upload" class="btn btn-success">
-            <a href="{% host_url 'add_show' host 'adminpanel' %}" class="btn btn-info">Back to Home</a>
+            <a href="{% url 'add_show' %}" class="btn btn-info">Back to Home</a>
         </form>
         {% if img_obj %}  
         <h3>Succesfully uploaded : {{img_obj.caption}}</h3>  

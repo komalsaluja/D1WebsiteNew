@@ -1,5 +1,4 @@
 {% load static %}
-{% load hosts %}
 <!Doctype html>
 <html lang="en">
   <head>
@@ -29,19 +28,19 @@
   <body>
       <h1> Welcome {{request.user}} </h1>
       <div class="d-inline w-50">
-<a href="{% host_url 'logout' host 'adminpanel' %}" class='btn btn-danger'>Logout</a> 
-<a href="{% host_url 'add_show' host 'adminpanel' %}" class='btn btn-warning'>ADD/SHOW DATA</a>
-<a href="{% host_url 'imageupload' host 'adminpanel' %}" class='btn btn-success'>UPLOAD ACHIEVEMENTS IMAGES</a> 
-<a href="{% host_url 'imagedanceupload' host 'adminpanel' %}" class='btn btn-success'>UPLOAD DANCE IMAGES</a> 
-<a href="{% host_url 'imageartupload' host 'adminpanel' %}" class='btn btn-success'>UPLOAD ART IMAGES</a> 
-<a href="{% host_url 'imageeventupload' host 'adminpanel' %}" class='btn btn-success'>UPLOAD EVENTS IMAGES</a> 
-<a href="{% host_url 'imagestudioupload' host 'adminpanel' %}" class='btn btn-success'>UPLOAD STUDIO IMAGES</a> 
-<a href="{% host_url 'imageview' host 'adminpanel' %}" class="btn btn-info">View Achievements Images</a>
-<a href="{% host_url 'imagedanceview' host 'adminpanel' %}" class="btn btn-info">View Dance Images</a>
-<a href="{% host_url 'imageartview' host 'adminpanel' %}" class="btn btn-info">View Art Images</a>
-<a href="{% host_url 'imageeventview' host 'adminpanel' %}" class="btn btn-info">View Events Images</a>
-<a href="{% host_url 'imagestudioview' host 'adminpanel' %}" class="btn btn-info">View Studio Images</a>
-<a href="{% host_url 'changepass' host 'adminpanel' %}" class="btn btn-info">Change Password</a>
+<a href="{% url 'logout' %}" class='btn btn-danger'>Logout</a> 
+<a href="{% url 'add_show' %}" class='btn btn-warning'>ADD/SHOW DATA</a>
+<a href="{% url 'imageupload' %}" class='btn btn-success'>UPLOAD ACHIEVEMENTS IMAGES</a> 
+<a href="{% url 'imagedanceupload' %}" class='btn btn-success'>UPLOAD DANCE IMAGES</a> 
+<a href="{% url 'imageartupload' %}" class='btn btn-success'>UPLOAD ART IMAGES</a> 
+<a href="{% url 'imageeventupload' %}" class='btn btn-success'>UPLOAD EVENTS IMAGES</a> 
+<a href="{% url 'imagestudioupload' %}" class='btn btn-success'>UPLOAD STUDIO IMAGES</a> 
+<a href="{% url 'imageview' %}" class="btn btn-info">View Achievements Images</a>
+<a href="{% url 'imagedanceview' %}" class="btn btn-info">View Dance Images</a>
+<a href="{% url 'imageartview' %}" class="btn btn-info">View Art Images</a>
+<a href="{% url 'imageeventview' %}" class="btn btn-info">View Events Images</a>
+<a href="{% url 'imagestudioview' %}" class="btn btn-info">View Studio Images</a>
+<a href="{% url 'changepass' %}" class="btn btn-info">Change Password</a>
   </div>
 {% include './messages.html' %}
 

@@ -1,5 +1,4 @@
 {% load static %}
-{% load hosts %}
 <!Doctype html>
 <html lang="en">
 
@@ -25,7 +24,7 @@
   
   <body>
    
-    <a href="{% host_url 'login' host 'adminpanel' %}"> <button class='btn btn-warning'>ADMIN</button> </a>
+    <a href="{% url 'login' %}"> <button class='btn btn-warning'>ADMIN</button> </a>
      
 
 

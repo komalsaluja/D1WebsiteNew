@@ -1,5 +1,4 @@
 {% extends './adminPage.html' %}
-{% load hosts %}
 {% block style %}
     h4  {
         text-align: center;
@@ -23,7 +22,7 @@
 {% endblock style %}
 
 {% block content %}
-<a href="{% host_url 'changepass' host 'adminpanel' %}" class='btn btn-primary'>Change Password</a> 
+<a href="{% url 'changepass'   %}" class='btn btn-primary'>Change Password</a> 
 
 
 <div class='row'>
@@ -62,8 +61,8 @@
           <td><div class='message'>{{st.msg}}</div></td>
           <td>{{st.date}}</td>
           <td>
-              <a href="{% host_url 'updatedata' st.id host 'adminpanel' %}" class="btn btn-warning btn-sm">Edit</a>
-              <form action="{% host_url 'deletedata' st.id host 'adminpanel' %}" method="post" class="d-inline">
+              <a href="{% url 'updatedata' st.id   %}" class="btn btn-warning btn-sm">Edit</a>
+              <form action="{% url 'deletedata' st.id   %}" method="post" class="d-inline">
                   {% csrf_token %}
                   <input type="submit" value="Delete" class="btn btn-danger">
               </form>

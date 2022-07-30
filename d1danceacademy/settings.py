@@ -34,7 +34,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'www.d1danceacademy.com', 'adminpanel.d1danceacademy.com', 'd1danceacademy.com' ,'127.0.0.1', 'd1-dance-academy.herokuapp.com']
+    'www.d1danceacademy.com','d1danceacademy.com' , 'd1-dance-academy.herokuapp.com']
 
 
 # Application definition
@@ -51,11 +51,9 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'corsheaders',
     'storages',
-    'django_hosts'
 ]
 
 MIDDLEWARE = [
-    'django_hosts.middleware.HostsRequestMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     # "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -67,12 +65,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django_hosts.middleware.HostsResponseMiddleware',
 ]
 
 
 ROOT_URLCONF = 'd1danceacademy.urls'
-ROOT_HOSTCONF = 'd1danceacademy.hosts'
 DEFAULT_HOST = 'www'
 PARENT_HOST = 'd1danceacademy.com'
 
@@ -98,6 +94,7 @@ WSGI_APPLICATION = 'd1danceacademy.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+MAX_CONN_AGE = 600
 
 DATABASES = {
     'default': {
@@ -218,6 +215,5 @@ CSRF_COOKIE_SECURE=True
 SECURE_SSL_REDIRECT=True
 CSRF_COOKIE_SECURE=True
 SESSION_COOKIE_SECURE=True
-
 
 
