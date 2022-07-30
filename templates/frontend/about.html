@@ -1,0 +1,113 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %}About{% endblock title %}
+
+{% block style %}
+
+
+.image {
+    width: 200px;
+   
+}
+
+h1 {
+    font-size:30px;
+    text-align:center;
+    color:white;
+    text-shadow:1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+.ul1 {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+}
+img{
+    filter:drop-shadow(0 0 0.75rem crimson);
+}
+
+.ul2 a {
+    padding:5px;
+    margin:5px;
+   
+}
+.ul2 {
+    font-size:25px;
+    line-height:70%;
+    padding:5px;
+    margin:5px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.div1 {
+    width:100%;
+}
+
+.li1 {
+   flex-basis:800px;
+}
+  
+{% endblock style %}
+{% block body %}
+<div class="div1">
+    <h1>D1 DANCE FITNESS AND ART ACADEMY</h1>
+    
+    <ul class="ul1 text-xl">
+       <li class="li1">
+       <p style="font-size:20px;color:white;margin:40px;">
+       The foundation of D1 Dance Academy was laid by Rohit Vijay Dhargave on 10th of April 2010.<br> D1 Dance Fitness and Art Academy is based in Nagpur and is ISO Certified and Registered.
+      <br>
+       <br> D1 Dance Crew has participated in many national and state level competitions 
+       and won over 200 dance competitions.
+       <br> We have a team of experienced, trained, and talented staff and artists. 
+        Our Speciality lies in: </p>
+        <ul class="ul2">
+       <a href="/services">  <button class="btn btn-info"> <li>DANCE</li></button></a>
+         <a href="/services">  <button class="btn btn-info"> <li>FITNESS</li></button></a>
+         <a href="/services"> <button class="btn btn-info">  <li>GYMNASTICS</li></button></a>
+         <a href="/events">  <button class="btn btn-info"> <li>EVENTS</li></button></a>
+         <a href="/art">  <button class="btn btn-info"> <li>ART</li></button></a>
+        </ul> 
+<p style="font-size:20px;color:white;margin:40px;">
+        We prepare Kids and Adults for competitions and Reality shows.  
+    
+        We also manage corporate events, school and college events and Wedding events.
+        <br> 
+        The services provided by us under event management include Dance, video, photography, decoration ,sound, lighting, etc. 
+    
+        Art classes and services are also offered under the D1 Banner. It includes Tattoo,Sketching,Makeup and Mehendi.
+
+
+        <img class="m-5 align-content-center" style="border-radius:20%;" width=600 height=315 src="{% static 'frontend/images/d1.jpeg' %}" alt='d1'></img>
+        
+        </p>
+    
+      
+       <h1>CONNECT WITH US:</h1>
+    
+       
+
+       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex text-center ">
+       <li>
+ <a class="nav-link1 yt" href="https://www.youtube.com/channel/UCK-ZmQNAws9G3Tsb9jD9Mwg" target="_blank" rel="noreferrer"><i class="fa-brands fa-youtube"></i></a> 
+ <a class="nav-link1 insta" href="https://www.instagram.com/d1_dance_crew_nagpur/" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i></a>
+ <a class="nav-link1 fb" href="https://www.facebook.com/D-ONE-DANCE-GROUP-202664833218291/" target="_blank" rel="noreferrer"><i class="fa-brands fa-facebook"></i></a>
+ <a class="nav-link1 call" href="tel:+919021152302"target="_blank" rel="noreferrer"><i class="fa-solid fa-phone"></i>+91-9021152302</a>
+ <a class="nav-link1 wa" href='https://api.whatsapp.com/send?phone=919021152302'><i class="fa-brands fa-whatsapp"></i></a> 
+
+
+</li>   
+   </ul>
+         
+    
+      <ul style="display:flex;flex-wrap:wrap-reverse;justify-content:center">
+          <a href="/studio" class="m-2">  <button class="btn btn-warning">D1 STUDIO</button></a>
+      
+        
+           <a href="/director" class="m-2">  <button class="btn btn-warning">ROHIT VIJAY DHARGAVE(DIRECTOR)</button></a> 
+        
+      </ul>
+    </div>      
+{% endblock body %}

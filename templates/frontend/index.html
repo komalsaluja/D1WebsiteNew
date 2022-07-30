@@ -1,0 +1,222 @@
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block style %}
+.rwd-video {
+    /* background: #99CCFF; */
+    box-shadow: 5px 5px 5px #f0c15b;
+    /* border: 2px solid gold; */
+    /* border-bottom-right-radius:50px ;
+    border-bottom-left-radius: 50px; */
+    margin-bottom: 40px;
+  }
+  .rwd-video {
+      height: 0;
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      padding-top: 30px;
+      position: relative;
+      
+  }
+  .rwd-video iframe,
+  .rwd-video object,
+  .rwd-video embed {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+  } 
+
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .rwd-video iframe{
+        /* pointer-events:none; */
+    }
+   
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .rwd-video iframe{
+        /* pointer-events:none; */
+    }
+}
+
+p,ul {
+    color:white;
+}
+.feature {
+    border: 2px solid white;
+    margin:1px;
+    width:auto;
+}
+.card-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: 2px solid black;
+  }
+  
+{% endblock style %}
+
+
+
+{% block title %}Home{% endblock title %}
+{% block body %}
+<div class="rwd-video">
+    <iframe width="560" height="315" class="video" src="https://www.youtube-nocookie.com/embed/rfixvdRCI8o?playlist=rfixvdRCI8o&controls=0&autoplay=1&loop=1&mute=1&rel=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; modestbranding; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+</div>
+
+<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom text-light">Dance Courses at D1</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col" style="background-color: black;">
+        <h2 style="color:gold">Basic Dance Course<br>(Duration : 3 months)</h2>
+        <p>It includes:
+            <ul>
+                <li>Dance</li>
+                <li>Fitness</li>
+                <li>Choreography</li>
+            </ul>
+            
+        </p>
+        <a href="/enquiry" class="icon-link d-inline-flex align-items-center">
+          <button class="btn btn-outline-warning">Enquire</button>
+        </a>
+      </div>
+
+      <div class="feature col" style="background-color: black;">
+        <h2 style="color:gold">Advance Certification Course<br>(Duration : 6 months)</h2>
+        <p>It includes:
+            <ul>
+                <li>Dance</li>
+                <li>Fitness</li>
+                <li>Gymnastics</li>
+                <li>Choreography</li>
+                <li>Certificate</li>
+            </ul>
+        </p>
+        <a href="/enquiry" class="icon-link d-inline-flex align-items-center">
+          <button class="btn btn-outline-warning">Enquire</button>
+        </a>
+      </div>
+
+      <div class="feature col" style="background-color: black;">
+        <h2 style="color:gold">Professional Diploma Course<br>(Duration : 12 months)</h2>
+        <p>It includes:
+            <ul>
+                <li>Dance</li>
+                <li>Fitness</li>
+                <li>Gymnastics</li>
+                <li>Choreography</li>
+                <li>Diploma</li>
+            </ul>
+            
+        </p>
+        <a href="/enquiry" class="icon-link d-inline-flex align-items-center">
+          <button class="btn btn-outline-warning">Enquire</button>
+        </a>
+      </div>
+
+      
+     
+    </div>
+  </div>
+
+  <div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom" style="color: bisque;">Explore D1</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+
+        <a href="/events">
+      <div class="col">
+      <div class="card card-cover h-100 p-5 overflow-hidden rounded-4 shadow-lg" style='background-image:url("{% static 'frontend/images/event1.jpeg' %}");'>
+          <div class="d-flex flex-column h-100 p-4 text-white text-shadow-1">
+            <h2 class="pt-5 mb-2 display-6 lh-1 fw-bold"  style="color:rgb(3, 0, 0);text-align:center;background-color:gray;opacity:0.8;">Events</h2>
+          </div>
+        </div>
+      </div>
+      </a>
+
+      <a href="/art">
+      <div class="col">
+      <div class="card card-cover h-100 p-5 overflow-hidden rounded-4 shadow-lg" style='background-image:url("{% static 'frontend/images/art1.jpeg' %}");'>
+          <div class="d-flex flex-column h-100 p-4 text-white text-shadow-1">
+            <h2 class="pt-5 mb-2 display-6 lh-1 fw-bold"  style="color:rgb(3, 0, 0);text-align:center;background-color:gray;opacity:0.8;">Art</h2>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <a href="/services">
+      <div class="col">
+      <div class="card card-cover h-100 p-5 overflow-hidden rounded-4 shadow-lg" style='background-image:url("{% static 'frontend/images/img20.jpeg' %}");'>
+          <div class="d-flex flex-column h-100 p-4 text-white text-shadow-1">
+            <h2 class="pt-5 mb-2 display-6 lh-1 fw-bold"  style="color:rgb(3, 0, 0);text-align:center;background-color:gray;opacity:0.8;">Dance</h2>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <a href="/studio">
+        <div class="col">
+        <div class="card card-cover h-100 p-5 overflow-hidden rounded-4 shadow-lg" style='background-image:url("{% static 'frontend/images/studio1.png' %}");'>
+            <div class="d-flex flex-column h-100 p-4 text-white text-shadow-1">
+              <h2 class="pt-5 mb-2 display-6 lh-1 fw-bold"  style="color:rgb(3, 0, 0);text-align:center;background-color:gray;opacity:0.8;">Studio</h2>
+            </div>
+          </div>
+        </div>
+        </a>
+
+        <a href="/achieve">
+            <div class="col">
+            <div class="card card-cover h-100 p-5 overflow-hidden rounded-4 shadow-lg" style='background-image:url("{% static 'frontend/images/img9.jpeg' %}");'>
+                <div class="d-flex flex-column h-100 p-4 text-white text-shadow-1">
+                  <h2 class="pt-5 mb-2 display-6 lh-1 fw-bold"  style="color:rgb(3, 0, 0);text-align:center;background-color:gray;opacity:0.8;">Gallery</h2>
+                </div>
+              </div>
+            </div>
+            </a>
+
+            <a href="/about">
+                <div class="col">
+                <div class="card card-cover h-100 p-5 overflow-hidden rounded-4 shadow-lg" style='background-image:url("{% static 'frontend/images/d1.jpeg' %}");'>
+                    <div class="d-flex flex-column h-100 p-4 text-white text-shadow-1">
+                      <h2 class="pt-5 mb-2 display-6 lh-1 fw-bold"  style="color:rgb(3, 0, 0);text-align:center;background-color:gray;opacity:0.8;">About</h2>
+                    </div>
+                  </div>
+                </div>
+                </a>
+
+      </div>
+     
+      
+
+
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+
+
+{% endblock body %}
+

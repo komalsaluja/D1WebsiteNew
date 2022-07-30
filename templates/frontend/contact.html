@@ -1,0 +1,185 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block style %}
+h1 {
+    color:gold;
+}
+h3 {
+    color:white;
+}
+    h5 {
+        color:lightblue;
+    }
+
+    .box {
+        text-align: center;
+        margin:30px;
+    }
+    .button {
+        font-size: 1em;
+        padding: 15px 35px;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        background: #403e3d;
+        border-radius: 50px;
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+        overflow-y:auto;
+    }
+    .overlay:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    .wrapper {
+        margin: 70px auto;
+        padding: 20px;
+        background: #e7e7e7;
+        border-radius: 5px;
+        width: 80%;
+        position: relative;
+        transition: all 5s ease-in-out;
+    }
+    .wrapper h2 {
+        margin-top: 0;
+        color: #333;
+    }
+    .wrapper .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+    .wrapper .close:hover {
+        color: #06D85F;
+    }
+    .wrapper .content {
+        max-height: 100%;
+        overflow: auto;
+    }
+    /*form*/
+    
+    .container {
+        border-radius: 5px;
+        background-color: #e7e7e7;
+        padding: 20px 0;
+    }
+    form label {
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 3px;
+    }
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input[type=email], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input[type="submit"] {
+        background-color: #413b3b;
+        color: #fff;
+        padding: 15px 50px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+    label {
+        color:black;
+    }
+
+ 
+{% endblock style %}
+
+
+
+{% block title %}Contact{% endblock title %}
+{% block body %}
+<div class="container-fluid px-0 text-center">
+    <h1>D1 Academy</h1>
+    <h3>Dance | Fitness | Art | Modeling | Events</h3>
+     <h5>Rohit Dhargave  (Founder | Choreographer)</h5> 
+      
+    <h5>
+        <a class="nav-link1 location" href='https://g.page/D1_DANCE_FITNESS_N_ART_ACADEMY?share' target="_blank" rel="noreferrer"><i class="fa-solid fa-location-dot"></i> Near Old Shiv Temple , Misal Layout, Jaripatka, Nagpur</a> 
+       </h5>
+   <h5> <a class="nav-link1 mail" style="color:white;" href='mailto:rohitdhargave1@gmail.com'  target="_blank" rel="noreferrer"><i class="fa-solid fa-envelope" style="margin:2px;"></i>rohitdhargave1@gmail.com</a> </h5>
+   <h5> <a class="nav-link1 mail" style="color:white;" href='mailto:d1danceacademy951@gmail.com' target="_blank" rel="noreferrer"><i class="fa-solid fa-envelope" style="margin:2px;"></i>d1danceacademy951@gmail.com</a> </h5>
+    <h5><a class="nav-link1 call" href="tel:+919021152302" target="_blank" rel="noreferrer"><i class="fa-solid fa-phone"></i>+91-9021152302</a>
+    </h5>
+</div>
+
+
+    <div class="box">
+		<a class="button" href="#divOne">Enquire</a>
+	</div>
+	<div class="overlay" id="divOne">
+		<div class="wrapper">
+			<h2>Please Fill up The Form</h2><a class="close" href="#">&times;</a>
+			<div class="content">
+				<div class="container">
+					<form method="post" action="/contact/">
+                        {% csrf_token %}
+
+                        {{form.as_p}}
+
+						{% comment %}  <label>Name</label>
+						<input placeholder="Your name.." type="text" id="name" name="name">
+						<label>Phone No.</label>
+						<input placeholder="Your contact no..." type="text" id="phone" name="phone">
+
+
+                        <label>Email</label>
+						<input placeholder="Your email id..." type="email" id="email" name="email">
+
+
+						<label>Subject</label> 
+						<textarea placeholder="Write something..." id="msg" name="msg"></textarea>  {% endcomment %}
+
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="container-fluid px-0 text-center">
+        <img width="500" height="315" src="{% static 'frontend/images/imgCard1.jpeg' %}" class="m-5" alt="card"/>
+        <img width="500" height="315" src="{% static 'frontend/images/imgCard.jpeg' %}" alt="card"/>
+    </div>
+
+
+
+  
+{% endblock body %}

@@ -1,0 +1,1 @@
+web: gunicorn d1danceacademy.wsgi --log-file -

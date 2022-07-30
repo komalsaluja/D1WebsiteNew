@@ -1,0 +1,77 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block title %}Director{% endblock title %}
+
+{% block style %}
+.main {
+    width:100%;
+}
+h1 {
+    font-size:30px;
+    text-align:center;
+    color:white;
+    text-shadow:1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.ul1 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.img1 {
+    width: 600px;
+    filter: drop-shadow(0 0 0.75rem crimson);
+}
+
+  
+{% endblock style %}
+{% block body %}
+
+<div class="main">
+<h1>ROHIT VIJAY DHARGAVE</h1>
+<ul class=" ul1 text-xl">
+<li>
+    <img class="img1" src="{% static 'frontend/images/director.png' %}" alt="director">
+</li>
+<li style="flex-basis: 800px;">
+    <p style="font-size: 20px; margin:40px; color:white;">
+        Rohit Vijay Dhargave (BCCA/MBA) laid the foundation of D1 Dance Academy on 10th of April,2010 in Nagpur. He is a versatile dancer and an experienced professional Choreographer and Fitness Trainer who is working as a Dance Teacher and Choreographer since 15 years and has trained more than 5000 students till date.  His Academy (D1 Dance Fitness and Art Academy) also organizes training camps for students and teachers.He trains students and adults for Reality shows and various national and international competitions. D1 Dance Crew has won more than 200 national and state level competitions under his guidance. D1 Dance Crew also made their way in HipHop Unite (Austria) under his guidance. 
+    </p>
+
+</li>
+</ul>
+
+    
+<h1>CONNECT WITH HIM:</h1>
+    
+       
+
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex text-center ">
+<li>
+<a class="nav-link1 yt" href="https://www.youtube.com/channel/UCK-ZmQNAws9G3Tsb9jD9Mwg" target="_blank" rel="noreferrer"><i class="fa-brands fa-youtube"></i></a> 
+<a class="nav-link1 insta" href="https://www.instagram.com/rohitdhargave_/" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i></a>
+<a class="nav-link1 fb" href="https://www.facebook.com/D-ONE-DANCE-GROUP-202664833218291/" target="_blank" rel="noreferrer"><i class="fa-brands fa-facebook"></i></a>
+<a class="nav-link1 call" href="tel:+919021152302"target="_blank" rel="noreferrer"><i class="fa-solid fa-phone"></i>+91-9021152302</a>
+
+<a class="nav-link1 wa" href='https://api.whatsapp.com/send?phone=919021152302'><i class="fa-brands fa-whatsapp"></i></a> 
+<a class="nav-link1 mail" style="color:white;" href='mailto:rohitdhargave1@gmail.com'><i class="fa-solid fa-envelope" style="margin:2px;"></i>rohitdhargave1@gmail.com</a> 
+
+
+</li>   
+</ul>
+
+</div>
+
+
+
+
+<ul style="display:flex;flex-wrap:wrap-reverse;justify-content:center">
+    <a href="/about" class="m-2">  <button class="btn btn-warning">D1 ACADEMY</button></a>
+
+  
+     <a href="/studio" class="m-2">  <button class="btn btn-warning">D1 STUDIO</button></a> 
+  
+</ul>
+{% endblock body %}

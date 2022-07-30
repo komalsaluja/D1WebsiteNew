@@ -1,0 +1,182 @@
+{% extends './base.html' %}
+
+{% block title %}Services{% endblock title %}
+
+{% block style %}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  p,ul {
+    color:white;
+}
+.feature {
+    border: 2px solid white;
+    margin:1px;
+    width:auto;
+}
+.card-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: 2px solid black;
+  }
+  .card-text {
+    color:black;
+  }
+  .card {
+    border:2px solid black;
+  }
+{% endblock style %}
+
+
+{% block body %}
+
+<main>
+
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light" style="color:gold;">DANCE | FITNESS | GYMNASTICS | ZUMBA | GYMNASIUM</h1>
+          <p class="lead" style="color:lightblue;">Welcome to D1 Academy. <br>   </p>
+          <a href='/enquiry'><button class='btn btn-outline-secondary'>Enquire</button></a>
+          <a href='/contact'><button class='btn btn-outline-primary'>Contact Us</button></a>
+        </div>
+      </div>
+    </section>
+  
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="container px-4 py-5 bg-dark" id="featured-3">
+    <h2 class="pb-2 border-bottom text-light">Dance Courses at D1</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col" style="background-color: black;">
+        <h2 style="color:gold">Basic Dance Course<br>(Duration : 3 months)</h2>
+        <p>It includes:
+            <ul>
+                <li>Dance</li>
+                <li>Fitness</li>
+                <li>Choreography</li>
+            </ul>
+            
+        </p>
+        <a href="/enquiry" class="icon-link d-inline-flex align-items-center">
+          <button class="btn btn-outline-warning">Enquire</button>
+        </a>
+      </div>
+
+      <div class="feature col" style="background-color: black;">
+        <h2 style="color:gold">Advance Certification Course<br>(Duration : 6 months)</h2>
+        <p>It includes:
+            <ul>
+                <li>Dance</li>
+                <li>Fitness</li>
+                <li>Gymnastics</li>
+                <li>Choreography</li>
+                <li>Certificate</li>
+            </ul>
+        </p>
+        <a href="/enquiry" class="icon-link d-inline-flex align-items-center">
+          <button class="btn btn-outline-warning">Enquire</button>
+        </a>
+      </div>
+
+      <div class="feature col" style="background-color: black;">
+        <h2 style="color:gold">Professional Diploma Course<br>(Duration : 12 months)</h2>
+        <p>It includes:
+            <ul>
+                <li>Dance</li>
+                <li>Fitness</li>
+                <li>Gymnastics</li>
+                <li>Choreography</li>
+                <li>Diploma</li>
+            </ul>
+            
+        </p>
+        <a href="/enquiry" class="icon-link d-inline-flex align-items-center">
+          <button class="btn btn-outline-warning">Enquire</button>
+        </a>
+      </div>
+
+      
+     
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+  
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for x in img %}
+          <div class="col">
+            <div class="card shadow-sm">
+                <a href="{{x.image.url}}" alt={{x.caption}}> 
+                   <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{x.image.url}}" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"/></img> 
+                  </a>
+  
+              <div class="card-body">
+                <p class="card-text">{{x.caption}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+         
+            
+  {% endfor %}
+             
+             
+                  
+                </div>
+              </div>
+            </div>
+
+  </main>
+{% endblock body %}
